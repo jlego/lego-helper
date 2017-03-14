@@ -1,0 +1,8 @@
+{
+	"plugins": [
+  		"transform-decorators",
+  		"syntax-async-generators"
+  	],
+	"ignore": ["atom"],
+	"presets": [["es2015", { "modules": false }], "stage-0", "stage-3"]
+}
