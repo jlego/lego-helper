@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle lego-helper",
+        "command": "lego-helper:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "lego-helper",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "lego-helper:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
