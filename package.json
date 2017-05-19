@@ -1,6 +1,6 @@
 {
   "name": "lego-helper",
-  "main": "./lib/main",
+  "main": "./src/main",
   "version": "0.0.1",
   "description": "A short description of your package",
   "keywords": [],

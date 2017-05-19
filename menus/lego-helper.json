@@ -1,33 +1,44 @@
 {
-    "context-menu": {
-        "atom-text-editor": [{
-            "label": "Toggle lego-helper",
-            "submenu": [{
-                    "label": "开启/关闭",
-                    "command": "lego-helper:toggle"
-                },{
-                    "label": "创建视图",
-                    "command": "lego-helper:createView"
-                },{
-                    "label": "创建数据源",
-                    "command": "lego-helper:createData"
-                },{
-                    "label": "创建组件",
-                    "command": "lego-helper:createCom"
-                },{
-                    "label": "插入组件",
-                    "command": "lego-helper:insertCom"
-                }
-            ]
-        }]
-    },
     "menu": [{
-        "label": "Packages",
+        "label": "代码片段",
         "submenu": [{
-            "label": "lego-helper",
+            "label": "开/关",
+            "command": "lego-helper:toggle"
+        }, {
+            "label": "类文件",
             "submenu": [{
-                "label": "开启/关闭",
-                "command": "lego-helper:toggle"
+                "label": "视图类",
+                "command": "lego-helper:createView"
+            }, {
+                "label": "数据模型",
+                "command": "lego-helper:createData"
+            }]
+        }, {
+            "label": "常规组件",
+            "submenu": [{
+                "label": "alert警告框",
+                "command": "lego-helper:alert"
+            }, {
+                "label": "数据模型",
+                "command": "lego-helper:createData"
+            }]
+        }, {
+            "label": "业务组件",
+            "submenu": [{
+                "label": "alert警告框",
+                "command": "lego-helper:alert"
+            }, {
+                "label": "数据模型",
+                "command": "lego-helper:createData"
+            }]
+        }, {
+            "label": "常用方法",
+            "submenu": [{
+                "label": "alert警告框",
+                "command": "lego-helper:alert"
+            }, {
+                "label": "数据模型",
+                "command": "lego-helper:createData"
             }]
         }]
     }]
