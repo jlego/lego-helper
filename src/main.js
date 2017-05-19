@@ -1,13 +1,15 @@
 'use babel';
 
-import { CompositeDisposable } from 'atom';
-import components from '../lib/components';
+import { Emitter, CompositeDisposable } from 'atom';
+import Modal from '../lib/modal';
 
 class Main {
     constructor() {
         this.subscriptions = null;
+        this.emitter = new Emitter();
     }
     activate(state) {
+        let that = this;
         // Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
         this.subscriptions = new CompositeDisposable();
 
@@ -20,9 +22,7 @@ class Main {
         }));
     }
     deactivate() {
-        // this.modalPanel.destroy();
         this.subscriptions.dispose();
-        // this.LegoView.destroy();
     }
     toggle() {
         console.log('LegoHelper was toggled!');
@@ -31,13 +31,11 @@ class Main {
         console.log('createFile:', name);
     }
     insertCode(name) {
-        let editor;
-        if (editor = atom.workspace.getActiveTextEditor()) {
-            console.warn(name, components);
-            // let selection = editor.getSelectedText();
-            // selection = selection.split('').reverse().join('');
-            editor.insertText(components[name]);
-        }
+        let ModalView = Lego.create(Modal, {
+            type: name,
+            context: this
+        });
+        this.AtomModalView = atom.workspace.addModalPanel({ item: ModalView.el, visible: true });
     }
 }
 export default new Main();

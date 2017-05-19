@@ -1,11 +1,11 @@
 {
     "menu": [{
-        "label": "代码片段",
+        "label": "Lego helper",
         "submenu": [{
             "label": "开/关",
             "command": "lego-helper:toggle"
         }, {
-            "label": "类文件",
+            "label": "创建类",
             "submenu": [{
                 "label": "视图类",
                 "command": "lego-helper:createView"
@@ -14,7 +14,7 @@
                 "command": "lego-helper:createData"
             }]
         }, {
-            "label": "常规组件",
+            "label": "基础组件",
             "submenu": [{
                 "label": "alert警告框",
                 "command": "lego-helper:alert"
@@ -32,7 +32,7 @@
                 "command": "lego-helper:createData"
             }]
         }, {
-            "label": "常用方法",
+            "label": "公共函数",
             "submenu": [{
                 "label": "alert警告框",
                 "command": "lego-helper:alert"
