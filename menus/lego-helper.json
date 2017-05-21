@@ -33,6 +33,99 @@
             }, {
                 "label": "chkgroup 选择框组",
                 "command": "lego-helper:chkgroup"
+            }, {
+                "label": "collapse 折叠",
+                "command": "lego-helper:collapse"
+            }, {
+                "label": "datepicker 时间选择器",
+                "command": "lego-helper:datepicker"
+            }, {
+                "label": "dropdown 下拉菜单",
+                "command": "lego-helper:dropdown"
+            }, {
+                "label": "dropdownbtn 下拉菜单按钮",
+                "command": "lego-helper:dropdownbtn"
+            }, {
+                "label": "editcom 在线编辑",
+                "command": "lego-helper:editcom"
+            }, {
+                "label": "facial 选择表情",
+                "command": "lego-helper:facial"
+            }, {
+                "label": "forms 表单",
+                "command": "lego-helper:forms"
+            }, {
+                "label": "inputs 输入框",
+                "command": "lego-helper:inputs"
+            }, {
+                "label": "listgroup 列表组",
+                "command": "lego-helper:listgroup"
+            }, {
+                "label": "loading 加载中",
+                "command": "lego-helper:loading"
+            }, {
+                "label": "message 提示信息",
+                "command": "lego-helper:message"
+            }, {
+                "label": "modal 模态框",
+                "command": "lego-helper:modal"
+            }, {
+                "label": "navs 导航",
+                "command": "lego-helper:navs"
+            }, {
+                "label": "nodata 暂无数据",
+                "command": "lego-helper:nodata"
+            }, {
+                "label": "notification 通知",
+                "command": "lego-helper:notification"
+            }, {
+                "label": "pagination 分页",
+                "command": "lego-helper:pagination"
+            }, {
+                "label": "permis 操作权限",
+                "command": "lego-helper:permis"
+            }, {
+                "label": "popover 弹出框",
+                "command": "lego-helper:popover"
+            }, {
+                "label": "rating 评分",
+                "command": "lego-helper:rating"
+            }, {
+                "label": "reply 回复",
+                "command": "lego-helper:reply"
+            }, {
+                "label": "search 搜索",
+                "command": "lego-helper:search"
+            }, {
+                "label": "selects 下拉选择框",
+                "command": "lego-helper:selects"
+            }, {
+                "label": "steps 步骤条",
+                "command": "lego-helper:steps"
+            }, {
+                "label": "tables 表格",
+                "command": "lego-helper:tables"
+            }, {
+                "label": "tabs 选项卡",
+                "command": "lego-helper:tabs"
+            }, {
+                "label": "tags 标签",
+                "command": "lego-helper:tags"
+            }, {
+                "label": "tooltip 提示泡",
+                "command": "lego-helper:tooltip"
+            }, {
+                "label": "transfer 穿梭框",
+                "command": "lego-helper:transfer"
+            }, {
+                "label": "tree 树型",
+                "command": "lego-helper:tree"
+            }, {
+                "label": "treeselect 下拉选择树",
+                "command": "lego-helper:treeselect"
+            }, {
+                "label": "upload 文件上传",
+                "command": "lego-helper:upload"
             }]
         }, {
             "label": "业务组件",
