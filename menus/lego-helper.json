@@ -10,17 +10,29 @@
                 "label": "视图类",
                 "command": "lego-helper:createView"
             }, {
-                "label": "数据模型",
+                "label": "数据类",
                 "command": "lego-helper:createData"
             }]
         }, {
             "label": "基础组件",
             "submenu": [{
-                "label": "alert警告框",
+                "label": "alert 警告框",
                 "command": "lego-helper:alert"
             }, {
-                "label": "数据模型",
-                "command": "lego-helper:createData"
+                "label": "avatar 选择人员",
+                "command": "lego-helper:avatar"
+            }, {
+                "label": "btngroup 按钮组",
+                "command": "lego-helper:btngroup"
+            }, {
+                "label": "btntoolbar 按钮工具条",
+                "command": "lego-helper:btntoolbar"
+            }, {
+                "label": "buttons 按钮",
+                "command": "lego-helper:buttons"
+            }, {
+                "label": "chkgroup 选择框组",
+                "command": "lego-helper:chkgroup"
             }]
         }, {
             "label": "业务组件",
@@ -33,13 +45,10 @@
             }]
         }, {
             "label": "公共函数",
-            "submenu": [{
-                "label": "alert警告框",
-                "command": "lego-helper:alert"
-            }, {
-                "label": "数据模型",
-                "command": "lego-helper:createData"
-            }]
+            "command": "lego-helper:fun"
+        }, {
+            "label": "我的收藏",
+            "command": "lego-helper:fav"
         }]
     }]
 }
