@@ -1,4 +1,10 @@
 {
+    "context-menu": {
+        "atom-text-editor": [{
+            "label": "收藏到lego helper",
+            "command": "lego-helper:addFav"
+        }]
+    },
     "menu": [{
         "label": "Lego helper",
         "submenu": [{

@@ -19,6 +19,7 @@ class Main {
             'lego-helper:toggle': () => this.toggle(),
             'lego-helper:createView': () => this.createFile('view'),
             'lego-helper:createData': () => this.createFile('data'),
+            'lego-helper:addFav': () => this.addFavCode(),
             'lego-helper:alert': () => this.insertCode('alert'),
         }));
     }
@@ -40,6 +41,13 @@ class Main {
                     editor.insertText(DataTpl);
                     break;
             }
+        }
+    }
+    addFavCode(){
+        let editor = atom.workspace.getActiveTextEditor();
+        if (editor) {
+            let selection = editor.getSelectedText();
+            console.warn(selection);
         }
     }
     insertCode(name) {
