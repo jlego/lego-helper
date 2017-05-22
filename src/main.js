@@ -1,7 +1,8 @@
 'use babel';
-
 import { Emitter, CompositeDisposable } from 'atom';
 import Modal from '../lib/modal';
+import ViewTpl from '../lib/view_tpl';
+import DataTpl from '../lib/data_tpl';
 
 class Main {
     constructor() {
@@ -29,6 +30,17 @@ class Main {
     }
     createFile(name) {
         console.log('createFile:', name);
+        let editor = atom.workspace.getActiveTextEditor();
+        if (editor) {
+            switch(name){
+                case 'view':
+                    editor.insertText(ViewTpl);
+                    break;
+                case 'data':
+                    editor.insertText(DataTpl);
+                    break;
+            }
+        }
     }
     insertCode(name) {
         let ModalView = Lego.create(Modal, {
