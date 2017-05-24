@@ -1,6 +1,6 @@
 'use babel';
 import { Emitter, CompositeDisposable } from 'atom';
-import Modal from '../lib/modal';
+import Modal from '../lib/modalView';
 import ViewTpl from '../lib/view_tpl';
 import DataTpl from '../lib/data_tpl';
 
@@ -21,6 +21,7 @@ class Main {
             'lego-helper:createData': () => this.createFile('data'),
             'lego-helper:addFav': () => this.addFavCode(),
             'lego-helper:alert': () => this.insertCode('alert'),
+            'lego-helper:avatar': () => this.insertCode('avatar'),
         }));
     }
     deactivate() {
