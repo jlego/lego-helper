@@ -27,6 +27,7 @@ class Main {
             'lego-helper:toggle': () => this.toggle(),
             'lego-helper:createView': () => this.createFile('view'),
             'lego-helper:createData': () => this.createFile('data'),
+            'lego-helper:fav': () => this.favCode('use'),
             'lego-helper:addFav': () => this.favCode('add'),
             'lego-helper:alert': () => this.insertCode('alert'),
             'lego-helper:avatar': () => this.insertCode('avatar'),
