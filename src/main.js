@@ -2,6 +2,7 @@
 import { Emitter, CompositeDisposable } from 'atom';
 import localforage from 'localforage';
 import AddFav from '../lib/addFavView';
+import UseFav from '../lib/useFavView';
 import Modal from '../lib/modalView';
 import ViewTpl from '../lib/view_tpl';
 import DataTpl from '../lib/data_tpl';
@@ -98,11 +99,8 @@ class Main {
                 this.AtomAddFavView = atom.workspace.addModalPanel({ item: AddFavView.el, visible: true });
                 break;
             case 'use':
-                let AddFavView = Lego.create(AddFav, {type: name, context: this});
-                this.AtomAddFavView = atom.workspace.addModalPanel({ item: AddFavView.el, visible: true });
-                break;
-            case 'manage':
-                // editor.insertText(DataTpl);
+                let UseFavView = Lego.create(UseFav, {type: name, context: this});
+                this.AtomUseFavView = atom.workspace.addModalPanel({ item: UseFavView.el, visible: true });
                 break;
         }
     }
