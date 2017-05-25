@@ -1,7 +1,7 @@
 {
     "context-menu": {
         "atom-text-editor": [{
-            "label": "收藏到lego helper",
+            "label": "收藏到lego-helper",
             "command": "lego-helper:addFav"
         }]
     },
@@ -141,15 +141,6 @@
             }, {
                 "label": "upload 文件上传",
                 "command": "lego-helper:upload"
-            }]
-        }, {
-            "label": "业务组件",
-            "submenu": [{
-                "label": "alert警告框",
-                "command": "lego-helper:alert"
-            }, {
-                "label": "数据模型",
-                "command": "lego-helper:createData"
             }]
         }, {
             "label": "公共函数",

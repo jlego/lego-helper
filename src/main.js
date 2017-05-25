@@ -11,19 +11,20 @@ class Main {
     constructor() {
         this.subscriptions = null;
         this.emitter = new Emitter();
+        this.open = false;
+    }
+    activate() {
+        let that = this;
         localforage.config({
             driver: localforage.INDEXEDDB,
             name: 'lego-helper-db',
             storeName: 'favStore'
         });
-    }
-    activate(state) {
-        let that = this;
         // Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
         this.subscriptions = new CompositeDisposable();
 
         // Register command that toggles this view
-        this.subscriptions.add(atom.commands.add('atom-workspace', {
+        this.subscriptionsOfCommands = atom.commands.add('atom-workspace', {
             'lego-helper:toggle': () => this.toggle(),
             'lego-helper:createView': () => this.createFile('view'),
             'lego-helper:createData': () => this.createFile('data'),
@@ -69,17 +70,28 @@ class Main {
             'lego-helper:tree': () => this.insertCode('tree'),
             'lego-helper:treeselect': () => this.insertCode('treeselect'),
             'lego-helper:upload': () => this.insertCode('upload'),
-        }));
+        });
     }
-    deactivate() {
+    deactivate () {
         this.subscriptions.dispose();
+        this.subscriptions = null;
+        this.subscriptionsOfCommands.dispose();
+        this.subscriptionsOfCommands = null;
     }
     toggle() {
-        console.log('LegoHelper was toggled!');
+        if(!this.open){
+            atom.notifications.addSuccess('成功启动lego-helper');
+            this.open = true;
+            if(!this.subscriptions) this.activate();
+        }else{
+            atom.notifications.addSuccess('成功关闭lego-helper');
+            this.open = false;
+            this.subscriptions.dispose();
+        }
     }
     // 创建文件
     createFile(name) {
-        console.log('createFile:', name);
+        if(!this.open) return;
         let editor = atom.workspace.getActiveTextEditor();
         if (editor) {
             switch(name){
@@ -94,6 +106,7 @@ class Main {
     }
     // 收藏
     favCode(type){
+        if(!this.open) return;
         switch(type){
             case 'add':
                 let AddFavView = Lego.create(AddFav, {type: name, context: this});
@@ -107,6 +120,7 @@ class Main {
     }
     // 插入组件
     insertCode(name) {
+        if(!this.open) return;
         let ModalView = Lego.create(Modal, {
             type: name,
             context: this
