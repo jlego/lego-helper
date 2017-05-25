@@ -33,6 +33,7 @@
     "jquery": "^3.2.1",
     "lego-core": "^1.10.24",
     "lego-ui": "^0.3.10",
+    "localforage": "^1.5.0",
     "perfect-scrollbar": "^0.6.16"
   }
 }
