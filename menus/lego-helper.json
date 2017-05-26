@@ -11,13 +11,37 @@
             "label": "开/关",
             "command": "lego-helper:toggle"
         }, {
-            "label": "创建类",
+            "label": "类文件",
             "submenu": [{
                 "label": "视图类",
                 "command": "lego-helper:createView"
             }, {
                 "label": "数据类",
                 "command": "lego-helper:createData"
+            }, {
+                "label": "路由类",
+                "command": "lego-helper:createApp"
+            }, {
+                "label": "模块首页",
+                "command": "lego-helper:indexApp"
+            }, {
+                "label": "模块列表页",
+                "command": "lego-helper:listApp"
+            }, {
+                "label": "模块列表表头",
+                "command": "lego-helper:listheaderApp"
+            }, {
+                "label": "模块创建页",
+                "command": "lego-helper:addApp"
+            }, {
+                "label": "模块详情页",
+                "command": "lego-helper:detailApp"
+            }, {
+                "label": "工具类",
+                "command": "lego-helper:createUtil"
+            }, {
+                "label": "样式",
+                "command": "lego-helper:createCss"
             }]
         }, {
             "label": "基础组件",

@@ -4,8 +4,7 @@ import localforage from 'localforage';
 import AddFav from '../lib/addFavView';
 import UseFav from '../lib/useFavView';
 import Modal from '../lib/modalView';
-import ViewTpl from '../lib/view_tpl';
-import DataTpl from '../lib/data_tpl';
+import files from '../lib/files';
 
 class Main {
     constructor() {
@@ -28,6 +27,14 @@ class Main {
             'lego-helper:toggle': () => this.toggle(),
             'lego-helper:createView': () => this.createFile('view'),
             'lego-helper:createData': () => this.createFile('data'),
+            'lego-helper:createApp': () => this.createFile('app'),
+            'lego-helper:createIndex': () => this.createFile('index'),
+            'lego-helper:createList': () => this.createFile('list'),
+            'lego-helper:createListheader': () => this.createFile('listheader'),
+            'lego-helper:createAdd': () => this.createFile('add'),
+            'lego-helper:createDetail': () => this.createFile('detail'),
+            'lego-helper:createUtil': () => this.createFile('util'),
+            'lego-helper:createCss': () => this.createFile('css'),
             'lego-helper:fav': () => this.favCode('use'),
             'lego-helper:addFav': () => this.favCode('add'),
             'lego-helper:alert': () => this.insertCode('alert'),
@@ -94,14 +101,8 @@ class Main {
         if(!this.open) return;
         let editor = atom.workspace.getActiveTextEditor();
         if (editor) {
-            switch(name){
-                case 'view':
-                    editor.insertText(ViewTpl);
-                    break;
-                case 'data':
-                    editor.insertText(DataTpl);
-                    break;
-            }
+            let tpl = files[name + 'Tpl'];
+            if(tpl) editor.insertText(tpl);
         }
     }
     // 收藏
