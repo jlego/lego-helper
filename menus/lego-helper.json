@@ -23,19 +23,19 @@
                 "command": "lego-helper:createApp"
             }, {
                 "label": "模块首页",
-                "command": "lego-helper:indexApp"
+                "command": "lego-helper:createIndex"
             }, {
                 "label": "模块列表页",
-                "command": "lego-helper:listApp"
+                "command": "lego-helper:createList"
             }, {
                 "label": "模块列表表头",
-                "command": "lego-helper:listheaderApp"
+                "command": "lego-helper:createListheader"
             }, {
                 "label": "模块创建页",
-                "command": "lego-helper:addApp"
+                "command": "lego-helper:createAdd"
             }, {
                 "label": "模块详情页",
-                "command": "lego-helper:detailApp"
+                "command": "lego-helper:createDetail"
             }, {
                 "label": "工具类",
                 "command": "lego-helper:createUtil"

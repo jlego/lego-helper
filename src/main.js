@@ -1,5 +1,6 @@
 'use babel';
 import { Emitter, CompositeDisposable } from 'atom';
+export config from './config';
 import localforage from 'localforage';
 import AddFav from '../lib/addFavView';
 import UseFav from '../lib/useFavView';
@@ -11,8 +12,9 @@ class Main {
         this.subscriptions = null;
         this.emitter = new Emitter();
         this.open = false;
+        this.activate();
     }
-    activate() {
+    activate(state) {
         let that = this;
         localforage.config({
             driver: localforage.INDEXEDDB,
@@ -89,7 +91,6 @@ class Main {
         if(!this.open){
             atom.notifications.addSuccess('成功启动lego-helper');
             this.open = true;
-            if(!this.subscriptions) this.activate();
         }else{
             atom.notifications.addSuccess('成功关闭lego-helper');
             this.open = false;
@@ -129,4 +130,5 @@ class Main {
         this.AtomModalView = atom.workspace.addModalPanel({ item: ModalView.el, visible: true });
     }
 }
+
 export default new Main();
